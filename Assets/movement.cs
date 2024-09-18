@@ -8,7 +8,7 @@ public class movement : MonoBehaviour
 {
     
     [SerializeField]
-    private float jumpVelo = 4f;
+    private float jumpVelo = 1f;
     private Rigidbody2D myBody;
     private bool isGrounded = true;
     private string GROUND_TAG = "Ground";
@@ -33,7 +33,7 @@ public class movement : MonoBehaviour
 
     void PlayerJump()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             //Debug.Log("Jump pressed");
             isGrounded = false;
@@ -43,9 +43,9 @@ public class movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(GROUND_TAG)) ;
+        if (collision.gameObject.CompareTag(GROUND_TAG))
         {
-            Debug.Log("hit ground");
+            //Debug.Log("hit ground");
             isGrounded = true;
         }
     }
