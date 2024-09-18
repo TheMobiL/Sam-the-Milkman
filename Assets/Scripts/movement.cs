@@ -8,14 +8,24 @@ public class movement : MonoBehaviour
 {
     
     [SerializeField]
-    private float jumpVelo = 1f;
+    private float jumpVelo = 10f;
     private Rigidbody2D myBody;
+    private Animator anim;
+    private SpriteRenderer sprite_renderer;
     private bool isGrounded = true;
     private string GROUND_TAG = "Ground";
+    private string walk_animation = "walk";
+
+    private float movementX;
+    [SerializeField]
+    private float move_force = 10f;
+
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
@@ -29,6 +39,19 @@ public class movement : MonoBehaviour
     void Update()
     {
         PlayerJump();
+        Player_movement();
+        Player_Animation();
+
+    }
+
+    void Player_movement()
+    {
+        
+        movementX = Input.GetAxisRaw("Horizontal");
+
+        transform.position += new Vector3(movementX, 0f, 0f) * move_force * Time.deltaTime;
+
+
     }
 
     void PlayerJump()
@@ -49,4 +72,26 @@ public class movement : MonoBehaviour
             isGrounded = true;
         }
     }
+
+    void Player_Animation()
+    {
+        if (movementX > 0)
+        {
+            anim.SetBool(walk_animation, true);
+            sprite_renderer.flipX = false;
+        }
+
+        else if (movementX < 0)
+        {
+            anim.SetBool(walk_animation, true);
+            sprite_renderer.flipX = true;
+        }
+        else
+        {
+            anim.SetBool(walk_animation, false);
+        }
+    }
+
+  
+
 }
