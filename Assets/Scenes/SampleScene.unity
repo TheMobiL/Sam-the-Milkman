@@ -264,13 +264,9 @@ GameObject:
   - component: {fileID: 504515009}
   - component: {fileID: 504515008}
   - component: {fileID: 504515011}
-  - component: {fileID: 504515012}
-  - component: {fileID: 504515013}
-  - component: {fileID: 504515014}
-  - component: {fileID: 504515015}
   - component: {fileID: 504515016}
-  - component: {fileID: 504515017}
   - component: {fileID: 504515018}
+  - component: {fileID: 504515019}
   m_Layer: 0
   m_Name: sam_hitbox
   m_TagString: Untagged
@@ -293,7 +289,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -417,58 +413,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &504515012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelo: 5
---- !u!114 &504515013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelo: 5
---- !u!114 &504515014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelo: 5
---- !u!114 &504515015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelo: 5
 --- !u!114 &504515016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,20 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelo: 5
---- !u!114 &504515017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504515007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e39677e8ad4ce4a8ed54c538cce6e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1524221562}
+  jumpVelo: 4
 --- !u!114 &504515018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +438,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e39677e8ad4ce4a8ed54c538cce6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 0}
+  laserPrefab: {fileID: 1524221562}
+--- !u!114 &504515019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504515007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d2e3ce91f82f347aebbe42fdaaa4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelo: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233155311973261159, guid: 4d04f41651e2d614dbaa30decc74ff94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3938269082133186514, guid: 4d04f41651e2d614dbaa30decc74ff94, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.4
@@ -657,7 +605,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: laser
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7033764871482398484, guid: 4d04f41651e2d614dbaa30decc74ff94, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

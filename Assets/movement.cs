@@ -8,7 +8,7 @@ public class movement : MonoBehaviour
 {
     
     [SerializeField]
-    private float jumpVelo = 1f;
+    private float jumpVelo = 7f;
     private Rigidbody2D myBody;
     private bool isGrounded = true;
     private string GROUND_TAG = "Ground";
