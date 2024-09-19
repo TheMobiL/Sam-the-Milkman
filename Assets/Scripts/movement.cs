@@ -8,11 +8,7 @@ public class movement : MonoBehaviour
 {
     
     [SerializeField]
-<<<<<<< HEAD:Assets/Scripts/movement.cs
     private float jumpVelo = 10f;
-=======
-    private float jumpVelo = 7f;
->>>>>>> 32c60442e18e40770e40c9895dee5a276a2740fc:Assets/movement.cs
     private Rigidbody2D myBody;
     private Animator anim;
     private SpriteRenderer sprite_renderer;
