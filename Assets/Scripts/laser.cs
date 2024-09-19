@@ -24,7 +24,7 @@ public class laser : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("shot laser");
+            //Debug.Log("shot laser");
             GameObject laser = (GameObject)Instantiate(laserPrefab, transform.position, transform.rotation);
             laser.layer = laserLayer;
         }
