@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class score : MonoBehaviour
+public class score : MonoBehaviour //scrapped code (moved it to laser_hit.cs)
 {
 
-    public Text Score;
+    //public Text Score;
 
-    int score_int = 0;
+    //int score_int = 0;
 
     // Start is called before the first frame update
     void Start()
