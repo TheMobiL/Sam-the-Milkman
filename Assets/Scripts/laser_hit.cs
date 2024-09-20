@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class laser_hit : MonoBehaviour
 {
+    [SerializeField]
+    private string LASER_TAG = "Laser";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +19,9 @@ public class laser_hit : MonoBehaviour
         
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Laser"))
+        if (other.gameObject.CompareTag(LASER_TAG))
         {
             Debug.Log("enemy hit");
             Destroy(this.gameObject);

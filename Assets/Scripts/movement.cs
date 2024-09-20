@@ -17,9 +17,9 @@ public class movement : MonoBehaviour
     private string walk_animation = "walk";
 
     private float movementX;
+    private LayerMask layermask;
     [SerializeField]
     private float move_force = 10f;
-
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class movement : MonoBehaviour
     // note: this is the code for a placeholder sprite (there is no actual sprite at the time of writing this) feel free to put this code somewhere else
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -51,6 +51,7 @@ public class movement : MonoBehaviour
 
         transform.position += new Vector3(movementX, 0f, 0f) * move_force * Time.deltaTime;
 
+        //Physics2D.IgnoreLayerCollision(6, 7); //scrapped
 
     }
 
