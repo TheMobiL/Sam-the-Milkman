@@ -6,8 +6,8 @@ using UnityEngine;
 public class laser_hit : MonoBehaviour
 {
     //public TextMeshProUGUI scoreText;
-    static int score = 0;
     [SerializeField]
+    public static int score = 0;
     private string LASER_TAG = "Laser"; //lol
     //public string scoreString;
 
